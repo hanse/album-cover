@@ -1,6 +1,6 @@
 {
   "name": "album-cover",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "fetch album covers from last.fm (non-commercial use only)",
   "main": "index.js",
   "scripts": {
