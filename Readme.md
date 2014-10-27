@@ -1,4 +1,4 @@
-# album-cover
+# album-cover [![Build Status](https://travis-ci.org/Hanse/album-cover.svg)](https://travis-ci.org/Hanse/album-cover)
 
 > Fetch album covers from [last.fm](http://www.last.fm/)
 
