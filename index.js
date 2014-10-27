@@ -12,7 +12,7 @@ module.exports = function(apiKey) {
       var album  = opts.album;
       var size   = opts.size || 'large';
 
-      apiUrl += '&artist=' + artist + '&album=' + album +'&api_key=' + apiKey + '&format=json';
+      apiUrl += '&artist=' + artist + '&album=' + album + '&api_key=' + apiKey + '&format=json';
       request.get(apiUrl, function(err, res) {
         if (err) return fn(err);
         if (res.body.error) return fn(res.body.message);

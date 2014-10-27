@@ -3,7 +3,7 @@
 > Fetch album covers from [last.fm](http://www.last.fm/)
 
 ```js
-var covers = require('album-cover');
+var covers = require('album-cover')('api key from last.fm');
 
 covers.search({
   artist: 'Pendulum',
