@@ -2,12 +2,17 @@
 
 > Fetch album covers from [last.fm](http://www.last.fm/)
 
+```bash
+$ npm install album-cover
+```
+
 ```js
 var covers = require('album-cover')('api key from last.fm');
 
 covers.search({
   artist: 'Pendulum',
-  album: 'Watercolour'
+  album: 'Watercolour',
+  size: 'mega'
 }, function(err, res) {
   console.log(res);
 });
