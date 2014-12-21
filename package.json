@@ -3,6 +3,14 @@
   "version": "0.0.2",
   "description": "fetch album covers from last.fm (non-commercial use only)",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "github.com/Hanse/album-cover"
+  },
+  "homepage": "https://github.com/Hanse/album-cover",
+  "bugs": {
+    "url": "https://github.com/Hanse/album-cover/issues"
+  },
   "scripts": {
     "test": "node_modules/.bin/mocha test.js"
   },
