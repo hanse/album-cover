@@ -5,7 +5,7 @@ var apiKey = '6cb4e4ac02504c6157f3609df73a6e0f';
 
 describe('coverImages', function() {
   it('should return a url', function(done) {
-    coverImages('6cb4e4ac02504c6157f3609df73a6e0f')
+    coverImages(apiKey)
       .search({
         artist: 'Empire of the Sun',
         album: 'Ice On The Dune',
@@ -16,14 +16,25 @@ describe('coverImages', function() {
       });
   });
 
-  it('should fail with no image message', function(done) {
-    coverImages('6cb4e4ac02504c6157f3609df73a6e0f')
+  it('should return an artist picture url', function(done) {
+    coverImages(apiKey)
       .search({
-        artist: null,
-        album: null,
+        artist: 'Madonna',
+        size: 'large'
+      }, function(err, result) {
+        assert.equal(result, 'http://userserve-ak.last.fm/serve/126/102597335.png');
+        done();
+      });
+  });
+
+  it('should fail with no empty image url', function(done) {
+    coverImages(apiKey)
+      .search({
+        artist: '64e424263f75a6813399e794d801b574fcc1bd99',
+        album: '64e424263f75a6813399e794d801b574fcc1bd99',
         size: 'mega'
       }, function(err, result) {
-        assert.equal(result, 'No image was found');
+        assert.equal(result, '');
         done();
       });
   })
