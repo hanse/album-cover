@@ -16,9 +16,18 @@ module.exports = function (apiKey) {
         if (res.body.error) return fn(res.body.message, '');
 
         var images = ((res.body.album) ? res.body.album.image : res.body.artist.image) || [];
-        var result = (images.filter(function (image) {
-          return image.size === size;
-        })[0] || {})['#text'];
+
+        var result;
+        if (size == 'all') {
+          result = {};
+          for (var s in images) {
+            result[s] = images[s]['#text'];
+          }
+        } else {
+          result = (images.filter(function (image) {
+            return image.size === size;
+          })[0] || {})['#text'];
+        }
 
         fn(null, result || '');
       });

@@ -16,6 +16,18 @@ describe('coverImages', function() {
       });
   });
 
+  it('should return an object of urls', function(done) {
+    coverImages(apiKey)
+      .search({
+        artist: 'Empire of the Sun',
+        album: 'Ice On The Dune',
+        size: 'all'
+      }, function(err, result) {
+        assert.equal(typeof result, 'object');
+        done();
+      });
+  });
+
   it('should return an artist picture url', function(done) {
     coverImages(apiKey)
       .search({
