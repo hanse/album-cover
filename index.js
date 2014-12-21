@@ -27,6 +27,11 @@ module.exports = function (apiKey) {
           result = (images.filter(function (image) {
             return image.size === size;
           })[0] || {})['#text'];
+
+          if (!result) { // Not available in the given size, fallback to another one
+            size = Object.keys(images).pop();
+            result = images[size]['#text'];
+          }
         }
 
         fn(null, result || '');
