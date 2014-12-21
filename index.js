@@ -30,7 +30,7 @@ module.exports = function (apiKey) {
 
           if (!result) { // Not available in the given size, fallback to another one
             size = Object.keys(images).pop();
-            result = images[size]['#text'];
+            result = (images[size] || {})['#text'];
           }
         }
 
