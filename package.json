@@ -1,15 +1,15 @@
 {
-  "name": "album-cover",
-  "version": "0.0.3",
-  "description": "fetch album covers from last.fm (non-commercial use only)",
+  "name": "music-cover",
+  "version": "0.1.0",
+  "description": "Fetch album covers and artist pictures from last.fm",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "github.com/Hanse/album-cover"
+    "url": "github.com/emersion/music-cover"
   },
-  "homepage": "https://github.com/Hanse/album-cover",
+  "homepage": "https://github.com/emersion/music-cover",
   "bugs": {
-    "url": "https://github.com/Hanse/album-cover/issues"
+    "url": "https://github.com/emersion/music-cover/issues"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha test.js"
@@ -19,9 +19,19 @@
     "image",
     "cover",
     "album",
+    "artist",
+    "picture",
     "art"
   ],
-  "author": "Hanse",
+  "contributors": [
+    {
+      "name": "Hanse"
+    },
+    {
+      "name": "emersion",
+      "url": "http://emersion.fr"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "superagent": "^0.20.0"
