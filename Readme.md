@@ -18,5 +18,8 @@ covers.search({
 });
 ```
 
+If you want to get all available sizes, set `size` to `all`. If you want an artist picture instead of an album cover, do not specify `artist`.
+
 ## License
+
 MIT
